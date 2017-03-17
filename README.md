@@ -7,4 +7,4 @@ Real-time kernel: Xenomai 3
 
 Platform: Raspberry Pi 3
 
-RT-diver:RTDM SPI (Refs:https://github.com/nicolas-schurando/spi-bcm283x-rtdm)
+RT-diver: RTDM SPI (Refs:https://github.com/nicolas-schurando/spi-bcm283x-rtdm)
