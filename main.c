@@ -10,10 +10,9 @@
 #include "spi.h"
 
 #define TASK_STKSZ 0 //default stack size
-#define TASK_PRIO 20 //0-99
+#define TASK_PRIO 99 //0-99
 #define TASK_MODE 0  //no flags
 
-int counter=100;
 RT_TASK demo_task;
 
 void demo(void *arg){
@@ -71,6 +70,7 @@ int main(int argc, char** argv) {
    open_device();
    
    //test spi write & read
+   //int counter=100;
    //spi_test(counter);
    
    /* Avoids memory swapping for this program */
@@ -83,7 +83,7 @@ int main(int argc, char** argv) {
     *            priority,
     *            mode (FPU, start suspended, ...)
     */
-   rt_task_create(&demo_task, "RT-spi", 0, 99, 0);
+   rt_task_create(&demo_task, "RT-spi", TASK_STKSZ, TASK_PRIO, TASK_MODE);
 
    /*
     * Arguments: &task,
