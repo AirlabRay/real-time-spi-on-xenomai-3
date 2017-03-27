@@ -61,9 +61,6 @@ void demo(void *arg){
    alarm(1);
 }
 
-
-
-
 int main(int argc, char** argv) {
   
    //open rtdm spi
